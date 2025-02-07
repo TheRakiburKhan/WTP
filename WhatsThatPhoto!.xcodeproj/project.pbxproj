@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F28AAAAA2D55D3CC00B620EC /* RKAPIService in Frameworks */ = {isa = PBXBuildFile; productRef = F28AAAA92D55D3CC00B620EC /* RKAPIService */; };
 		F28AAAAC2D55D3CC00B620EC /* RKAPIUtility in Frameworks */ = {isa = PBXBuildFile; productRef = F28AAAAB2D55D3CC00B620EC /* RKAPIUtility */; };
+		F28AAAB32D55E4B800B620EC /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F28AAAB22D55E4B800B620EC /* Secret.xcconfig */; };
 		F2F819972D553D2E0084571B /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F2F819962D553D2E0084571B /* Debug.xcconfig */; };
 		F2F819992D553D4E0084571B /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F2F819982D553D4E0084571B /* Staging.xcconfig */; };
 		F2F8199B2D553D860084571B /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F2F8199A2D553D860084571B /* Release.xcconfig */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F28AAAB22D55E4B800B620EC /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
 		F2F8195F2D5521030084571B /* WhatsThatPhoto!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WhatsThatPhoto!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F8196F2D55210D0084571B /* WhatsThatPhoto!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WhatsThatPhoto!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F819792D55210E0084571B /* WhatsThatPhoto!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WhatsThatPhoto!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 		F2F819562D5521030084571B = {
 			isa = PBXGroup;
 			children = (
+				F28AAAB22D55E4B800B620EC /* Secret.xcconfig */,
 				F2F8199A2D553D860084571B /* Release.xcconfig */,
 				F2F819982D553D4E0084571B /* Staging.xcconfig */,
 				F2F819962D553D2E0084571B /* Debug.xcconfig */,
@@ -235,6 +238,7 @@
 			files = (
 				F2F819992D553D4E0084571B /* Staging.xcconfig in Resources */,
 				F2F819972D553D2E0084571B /* Debug.xcconfig in Resources */,
+				F28AAAB32D55E4B800B620EC /* Secret.xcconfig in Resources */,
 				F2F8199B2D553D860084571B /* Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +299,7 @@
 /* Begin XCBuildConfiguration section */
 		F2F819812D55210E0084571B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2F819962D553D2E0084571B /* Debug.xcconfig */;
+			baseConfigurationReference = F28AAAB22D55E4B800B620EC /* Secret.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -359,7 +363,7 @@
 		};
 		F2F819822D55210E0084571B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2F8199A2D553D860084571B /* Release.xcconfig */;
+			baseConfigurationReference = F28AAAB22D55E4B800B620EC /* Secret.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -426,6 +430,7 @@
 				DEVELOPMENT_TEAM = LWVWLR4225;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WhatsThatPhoto--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -460,6 +465,7 @@
 				DEVELOPMENT_TEAM = LWVWLR4225;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WhatsThatPhoto--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -560,7 +566,7 @@
 		};
 		F2F819922D553CC80084571B /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2F819982D553D4E0084571B /* Staging.xcconfig */;
+			baseConfigurationReference = F28AAAB22D55E4B800B620EC /* Secret.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -635,6 +641,7 @@
 				ENABLE_PREVIEWS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "STAGING=1";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WhatsThatPhoto--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
