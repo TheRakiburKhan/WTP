@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import OSLog
+
+extension Logger {
+    init(category: LoggerCategory) {
+        self.init(subsystem: Environment.loggingSubsystem.value, category: category.rawValue)
+    }
+}
