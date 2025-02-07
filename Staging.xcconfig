@@ -1,0 +1,13 @@
+//
+//  Staging.xcconfig
+//  WhatsThatPhoto!
+//
+//  Created by Rakibur Khan on 07/02/2025.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+IPHONEOS_DEPLOYMENT_TARGET = 18.0
+PRODUCT_NAME = "WTP Staging"
+PRODUCT_BUNDLE_IDENTIFIER = "me.therakiburkhan.app.WTP-Staging"

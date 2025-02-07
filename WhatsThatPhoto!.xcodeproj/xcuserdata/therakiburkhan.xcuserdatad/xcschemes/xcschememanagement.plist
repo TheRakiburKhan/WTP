@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>WhatsThatPhoto! Debug.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>WhatsThatPhoto! Staging.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>WhatsThatPhoto!.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F2F8195E2D5521030084571B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2F8196E2D55210D0084571B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2F819782D55210E0084571B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

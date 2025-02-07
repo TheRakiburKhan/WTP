@@ -23,6 +23,12 @@ xcuserdata/
 *.xcscmblueprint
 *.xcconfig
 
+# But include important xcconfig
+!Debug.xcconfig
+!Staging.xcconfig
+!Release.xcconfig
+
+
 ## Obj-C/Swift specific
 *.hmap
 *.ipa

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>scheme_debug</key>
+	<string>https</string>
+	<key>scheme_staging</key>
+	<string>https</string>
+	<key>scheme_release</key>
+	<string>https</string>
+	<key>base_url_debug</key>
+	<string>api.pexels.com</string>
+	<key>base_url_staging</key>
+	<string>api.pexels.com</string>
+	<key>base_url_release</key>
+	<string>api.pexels.com</string>
+</dict>
+</plist>
