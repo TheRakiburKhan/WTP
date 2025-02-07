@@ -74,7 +74,7 @@ fileprivate func buildURL(scheme: String = URLInfoRetreaver.scheme.stringValue, 
 }
 
 @MainActor
-let rkapiService: RKAPIService = RKAPIService(sessionConfiguration: .beeda(accessToken: Preferences.userAccessToken, app: .seller), delegate: nil, queue: nil)
+let rkapiService: RKAPIService = RKAPIService(sessionConfiguration: .wtp(accessToken: Environment.apiKey.value), delegate: nil, queue: nil)
 
 enum URLS {
     enum Photo: Endpoint {
