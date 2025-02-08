@@ -16,7 +16,7 @@ protocol API: CodableDataModelBase {
 extension API {
     func parseResponse<T: Decodable>(from url: URL?, additionalHeader: [Header]? = nil, decoder: JSONDecoder = .init(), logger: Logger? = nil) async throws -> T? {
         do {
-            let reply = try await rkapiService.fetchItems(urlLink: url, additionalHeader: additionalHeader)
+            let reply = try await rkapiService.fetchItems(urlLink: url, additionalHeader: additionalHeader, cachePolicy: .returnCacheDataElseLoad)
             
             guard let rawData = reply.data else { throw reply.response }
             

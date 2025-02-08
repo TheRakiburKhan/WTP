@@ -20,6 +20,8 @@ extension URLSessionConfiguration {
             "Content-Type": "application/json",
             "Authorization": "\(accessToken)"
         ]
+        configuration.urlCache = WTPCache().cacheConfiguration
+    
         
         return configuration
     }

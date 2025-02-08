@@ -39,7 +39,7 @@ enum URLInfoRetreaver {
 private func retreveKey(key: URLInfoRetreaver) -> String {
     let decoder = PropertyListDecoder()
     
-    guard let url = Bundle.main.url(forResource: "URLInfo", withExtension: "plist") else {return ""}
+    guard let url = Bundle.main.url(forResource: "URLS", withExtension: "plist") else {return ""}
     
     if let data = try? Data(contentsOf: url) {
         

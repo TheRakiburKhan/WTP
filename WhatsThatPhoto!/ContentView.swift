@@ -17,6 +17,9 @@ struct ContentView: View {
             Text("Hello, world!")
             
             Text("Environment Value is: \(Environment.apiKey.value)")
+            
+            Text("Bundle: \(Environment.loggingSubsystem.value)")
+            GalleryView()
         }
         .padding()
     }

@@ -9,5 +9,5 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 IPHONEOS_DEPLOYMENT_TARGET = 18.0
-PRODUCT_NAME = "WTP Debug"
+PRODUCT_NAME = WTP Debug
 PRODUCT_BUNDLE_IDENTIFIER = me.therakiburkhan.app.WTP-Debug

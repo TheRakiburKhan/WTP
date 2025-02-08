@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct GalleryView: View {
+    @StateObject private var viewModel: GalleryViewModel = .init()
+    
     var body: some View {
-        Text("Hello, World!")
+        Button {
+            Task {
+                await viewModel.fetchPhotos()
+            }
+        } label: {
+            Text("Hello, World!")
+        }
     }
 }
 

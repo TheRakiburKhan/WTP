@@ -23,8 +23,8 @@ enum Environment {
 }
 
 private enum Keys: String {
-    case apiKey = "API Key"
-    case identifier = "Bundle Identifier"
+    case apiKey = "APIKey"
+    case identifier = "CFBundleIdentifier"
     
     func retreveKey() -> String {
         guard let apiKey = Bundle.main.object(forInfoDictionaryKey: self.rawValue) as? String else {return "No value found"}
