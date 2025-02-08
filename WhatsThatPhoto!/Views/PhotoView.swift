@@ -10,6 +10,7 @@ import SwiftUI
 struct PhotoView: View {
     @State private var currentZoom = 0.0
     @State private var totalZoom = 1.0
+    @State private var downloadedImge: Image?
     
     var photo: Photo
     var body: some View {
@@ -21,7 +22,7 @@ struct PhotoView: View {
                     .font(.headline)
                     .bold()
             }
-            .padding(.horizontl)
+            .padding(.horizontal)
             
             Spacer()
             
