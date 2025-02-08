@@ -11,13 +11,36 @@ struct GalleryView: View {
     @StateObject private var viewModel: GalleryViewModel = .init()
     
     var body: some View {
-        Button {
-            Task {
-                await viewModel.fetchPhotos()
+        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]) {
+            ForEach(viewModel.photos, id: \.self) { photo in
+                AsyncImage(url: photo.sources.medium) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .padding(5)
+                        .background(photo.avgColor)
+                } placeholder: {
+                    Image(systemName: "photo")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(5)
+                }
+                .onTapGesture {
+                    Router.pushValueToNavigation(PhotoGalleryRouter.photo(photo: photo))
+                }
+                .onAppear {
+                    if photo == viewModel.photos.last {
+                        Task {
+                            await viewModel.fetchData()
+                        }
+                    }
+                }
             }
-        } label: {
-            Text("Hello, World!")
         }
+        .task {
+            await viewModel.fetchData()
+        }
+        
     }
 }
 

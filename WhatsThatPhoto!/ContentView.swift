@@ -10,18 +10,21 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            
-            Text("Environment Value is: \(Environment.apiKey.value)")
-            
-            Text("Bundle: \(Environment.loggingSubsystem.value)")
-            GalleryView()
+        WTPNavigationView {
+            ScrollView {
+                GalleryView()
+            }
+            .navigationTitle(Text("Featured Photos"))
+            .navigationDestination(for: PhotoGalleryRouter.self) { route in
+                switch route {
+                    case .gallery:
+                        GalleryView()
+                        
+                    case .photo(let photo):
+                        PhotoView(photo: photo)
+                }
+            }
         }
-        .padding()
     }
 }
 

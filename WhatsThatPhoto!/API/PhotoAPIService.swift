@@ -16,15 +16,16 @@ class PhotoAPIService: CodableDataModelBase, API {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
     }
     
-    func dashboardData(page: Int, perPage: Int) async -> Result<[Photo], Error> {
+    func dashboardData(page: Int, perPage: Int) async -> Result<(photos:[Photo], nextPage: Bool), Error> {
         do {
             guard let infoTypeData: CodableResponseRootModel<[CodablePhoto]> = try await parseResponse(from: URLS.Photo.curated(page: page, perPage: perPage).url, logger: LoggingSystem.gallary) else {
                 throw URLError(.unknown)
             }
             
-            let returnData: [Photo] = infoTypeData.photos?.compactMap{.init($0)} ?? []
+            let returnData1: [Photo] = infoTypeData.photos?.compactMap{.init($0)} ?? []
+            let returnData2: Bool = infoTypeData.nextPage != nil
             
-            return .success(returnData)
+            return .success((returnData1, returnData2))
         } catch {
             return .failure(error)
         }

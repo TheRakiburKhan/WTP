@@ -8,18 +8,35 @@
 import Foundation
 
 class GalleryViewModel: ObservableObject {
-    @Published var photos: [Int] = []
+    @Published var photos: [Photo] = []
     
+    private var currentPage: Int = 0
+    private var hasNext: Bool = true
+    private var perPage: Int = 15
+    private var apiOnCall: Bool = false
     private let apiService: PhotoAPIService = .init()
     
-    func fetchPhotos() async {
-        let response = await apiService.dashboardData(page: 1, perPage: 15)
+    func fetchData() async {
+        await fetchPhotos()
+    }
+    
+    private func fetchPhotos() async {
+        guard !apiOnCall else {return}
+        guard hasNext else {return}
+        
+        currentPage += 1
+        apiOnCall = true
+        let response = await apiService.dashboardData(page: currentPage, perPage: perPage)
+        apiOnCall = false
         
         switch response {
             case .success(let success):
-                print(success.count)
+                await MainActor.run {
+                    photos.append(contentsOf: success.photos)
+                    hasNext = success.nextPage
+                }
             case .failure(let failure):
-                print(failure)
+                LoggingSystem.gallary.debug("\(failure.localizedDescription)")
         }
     }
 }
